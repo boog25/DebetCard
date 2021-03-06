@@ -11,6 +11,7 @@ public class TestSelenide {
     @Test
     void shouldNewRequest(){
         Configuration.browser = "Firefox";
+        Configuration.headless = true;
         open("http://localhost:9999/");
         $("[type='text']").setValue("Чиков Андрей Андреевич");
         $("[type='tel']").setValue("+79126893813");
