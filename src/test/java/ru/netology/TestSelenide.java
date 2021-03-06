@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestSelenide {
     @Test
-    void shouldNewRequest(){
+    void shouldNewRequest() {
         Configuration.browser = "Firefox";
         Configuration.headless = true;
         open("http://localhost:9999/");
