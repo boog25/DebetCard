@@ -18,6 +18,7 @@ public class TestSelenide {
         $("[type='tel']").setValue("+79126893813");
         $("[data-test-id='agreement']").click();
         $("[type='button']").click();
-        $(withText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.")).shouldBe(Condition.visible);
+        $(withText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."))
+                .shouldBe(Condition.visible);
     }
 }
