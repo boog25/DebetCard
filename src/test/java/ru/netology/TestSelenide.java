@@ -1,5 +1,6 @@
 package ru.netology;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +18,6 @@ public class TestSelenide {
         $("[type='tel']").setValue("+79126893813");
         $("[data-test-id='agreement']").click();
         $("[type='button']").click();
-        $(withText("Заявка на дебетовую карту"));
+        $(withText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.")).shouldBe(Condition.visible);
     }
 }
